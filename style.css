@@ -102,8 +102,8 @@ body {
     .inpt-mensagens textarea{
         min-width: 88vw;
         max-width: 88vw;
-        max-height: 20vh;
-        min-height: 20vh;
+        max-height: 30vh;
+        min-height: 30vh;
         border-radius: 5px;
         height: 20vh;
         margin-top: 2vh;

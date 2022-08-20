@@ -32,7 +32,6 @@ if (parseInt(fim) !== contador){
 }
 else{
     
-    textAviso.innerText = '🖐️ Qtd. Desejada atingida!\n✅ Numeros copiados';
     copiar()
 }
 }
@@ -66,11 +65,12 @@ function copiar(){
         numeros3 = numeros3.replaceAll('+', '');
         numeros3 = numeros3.split(',');
     let mensagemFiltrada = window.encodeURIComponent(mensagem);
+    let restantesCopiados = (numeros3.length-contador);
 
 
 
     navigator.clipboard.writeText(numeros3.slice(numeros3.length - (numeros3.length-contador)));
    
-    textAviso.innerText = '⚠️ Atividade finalizada!\n✅ Numeros copiados!\n🔒 Cole-os em um local seguro!\n';
+    textAviso.innerText = `⚠️ Atividade finalizada!\n✅ [ ${restantesCopiados} ] Numeros copiados!\n🔒 Cole-os em um local seguro!`;
     window.scrollTo(x = 0, y = 0); /*Voltando a tela para o início da página*/
 }
